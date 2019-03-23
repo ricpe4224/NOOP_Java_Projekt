@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sat Mar 23 13:53:56 CET 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0169-aa9d-688b-000007447cf0 
+on database directory C:\Users\Marko\eclipse-workspace_druga_godina\FINAL_projekt_NOOP\database with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/C:/Users/Marko/eclipse-workspace_druga_godina/FINAL_projekt_NOOP/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_191-b12
+user.dir=C:\Users\Marko\eclipse-workspace_druga_godina\FINAL_projekt_NOOP
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
