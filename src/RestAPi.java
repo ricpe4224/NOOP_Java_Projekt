@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 import java.io.BufferedReader;
 
 import java.io.IOException;
@@ -8,16 +11,29 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
+// TODO: Auto-generated Javadoc
 /*
  * Klasa koja salje zahtjev prema REST servisu
  * poziva se u klasi obrada zahtjeva
  */
 
+/**
+ * The Class RestAPi.
+ */
 public class RestAPi {
 
+	/** The grad. */
 	String grad;
+	
+	/** The json response. */
 	String jsonResponse = "";
 
+	/**
+	 * Gets the request.
+	 *
+	 * @param type the type
+	 * @return the request
+	 */
 	@SuppressWarnings("deprecation")
 	public String getRequest(String type) {
 
@@ -62,6 +78,11 @@ public class RestAPi {
 
 	}
 
+	/**
+	 * Sets the grad.
+	 *
+	 * @param grad the new grad
+	 */
 	public void setGrad(String grad) {
 		this.grad = grad;
 

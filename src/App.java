@@ -1,4 +1,14 @@
+// TODO: Auto-generated Javadoc
+/**
+ * The Class App.
+ */
 public class App {
+	
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	/* 
 	 * 
 	 * Klasa koja pokrece server

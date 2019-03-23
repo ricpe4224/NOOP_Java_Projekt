@@ -1,13 +1,27 @@
+/*
+ * 
+ */
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class RunServer.
+ */
 /*
  * Klasa za pokretanje servera
  */
 public class RunServer {
+	
+	/** The port. */
 	int port;
 	
+	/**
+	 * Instantiates a new run server.
+	 *
+	 * @param port the port
+	 */
 	public RunServer(int port) {
 		this.port = port;
 		// TODO Auto-generated constructor stub
@@ -16,6 +30,9 @@ public class RunServer {
 	 * prihvaca korisnika na socket proljedjuje njegov zahtjev niti (obrada zahtjeva)
 	 */
 	
+	/**
+	 * Take control.
+	 */
 	public void takeControl() {
 		ServerSocket serverSocket = null;
 		 try {

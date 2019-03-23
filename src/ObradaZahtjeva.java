@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -10,10 +13,23 @@ import com.google.gson.Gson;
 
 import RestPojo.GsonScr;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ObradaZahtjeva.
+ */
 public class ObradaZahtjeva extends Thread{
+	
+	/** The grad. */
 	String grad;
+	
+	/** The socket. */
 	Socket socket;
 	
+	/**
+	 * Instantiates a new obrada zahtjeva.
+	 *
+	 * @param socket the socket
+	 */
 	public ObradaZahtjeva(Socket socket) {
 			
 			this.socket = socket;
@@ -63,17 +79,30 @@ public class ObradaZahtjeva extends Thread{
 
 	}
 	
+	/* (non-Javadoc)
+	 * @see java.lang.Thread#start()
+	 */
 	@Override
 	public synchronized void start() {
 
 		super.start();
 	}
 	
+	/* (non-Javadoc)
+	 * @see java.lang.Thread#interrupt()
+	 */
 	@Override
 	public void interrupt() {
 
 		super.interrupt();
 	}
+	
+	/**
+	 * Odgovor servera.
+	 *
+	 * @param odgovor the odgovor
+	 * @param s the s
+	 */
 	/*
 	 * metoda kojom server vraca odgovor poziva se u run metodi
 	 */

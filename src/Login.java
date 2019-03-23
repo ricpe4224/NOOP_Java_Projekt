@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
@@ -8,20 +11,35 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+// TODO: Auto-generated Javadoc
 /*
  * Klasa koja sluzi za povezivanje na bazu
  */
 
+/**
+ * The Class Login.
+ */
 public class Login {
 
+	/** The Constant DB_URL. */
 	private static final String DB_URL = "jdbc:derby:database;create=true";
+	
+	/** The conn. */
 	private static Connection conn = null;
+	
+	/** The statement. */
 	private static Statement statement = null;
 
 	/*
 	 * Spajanje na bazu
 	 */
 
+	/**
+	 * Instantiates a new login.
+	 *
+	 * @throws InstantiationException the instantiation exception
+	 * @throws IllegalAccessException the illegal access exception
+	 */
 	public Login() throws InstantiationException, IllegalAccessException {
 
 		
@@ -30,6 +48,12 @@ public class Login {
 
 	}
 
+	/**
+	 * Creates the con.
+	 *
+	 * @throws InstantiationException the instantiation exception
+	 * @throws IllegalAccessException the illegal access exception
+	 */
 	public void createCon() throws InstantiationException, IllegalAccessException {
 		try {
 
@@ -42,6 +66,9 @@ public class Login {
 		}
 	}
 
+	/**
+	 * Close connection.
+	 */
 	/*
 	 * Zatvaranje konekcije prema bazi
 	 */
@@ -55,6 +82,13 @@ public class Login {
 
 	}
 
+	/**
+	 * User exists.
+	 *
+	 * @param username the username
+	 * @param password the password
+	 * @return true, if successful
+	 */
 	/*
 	 * provjerava postoji li korisnik u bazi
 	 */
@@ -80,6 +114,12 @@ public class Login {
 		return false;
 	}
 
+	/**
+	 * Creates the new user.
+	 *
+	 * @param username the username
+	 * @param password the password
+	 */
 	/*
 	 * Dodavanje korisnika u bazu
 	 */
@@ -93,6 +133,9 @@ public class Login {
 		}
 	}
 
+	/**
+	 * Sets the up table.
+	 */
 	public void setUpTable() {
 		String TABLE_NAME = "TABLICA";
 
@@ -114,7 +157,7 @@ public class Login {
 			}
 
 		} catch (SQLException e) {
-System.out.println("blyafeaef");
+
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {

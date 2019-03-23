@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package client;
 
 import java.io.IOException;
@@ -11,16 +14,30 @@ import com.google.gson.Gson;
 
 import RestPojo.GsonScr;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AppClient.
+ */
 /*
  * Klasa koja salje zahtjev serveru
  */
 public class AppClient {
+	
+	/** The grad. */
 	private String grad = "";
+	
+	/** The adresa. */
 	final String adresa = "127.0.0.1";
+	
+	/** The port. */
 	final int port = 50000;
 
+	/** The mapper. */
 	ObjectMapper mapper = new ObjectMapper();
 
+	/**
+	 * Take control.
+	 */
 	/*
 	 * Spajanje na soket server i obradjuje odgovor servera
 	 */
@@ -78,10 +95,20 @@ public class AppClient {
 
 	}
 
+	/**
+	 * Gets the grad.
+	 *
+	 * @return the grad
+	 */
 	public String getGrad() {
 		return grad;
 	}
 
+	/**
+	 * Sets the grad.
+	 *
+	 * @param grad the new grad
+	 */
 	public void setGrad(String grad) {
 		this.grad = grad;
 	}

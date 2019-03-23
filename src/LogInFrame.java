@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -10,13 +13,29 @@ import javax.swing.JTextField;
 
 import client.MainframeClient;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class LogInFrame.
+ */
 public class LogInFrame {
 
+	/** The frame. */
 	private JFrame frame;
+	
+	/** The text field log user. */
 	private JTextField textFieldLogUser;
+	
+	/** The text field log pass. */
 	private JTextField textFieldLogPass;
+	
+	/** The lg. */
 	private Login lg;
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	/*
 	 * Klasa za pokretanje Log in forme
 	 */
@@ -33,12 +52,21 @@ public class LogInFrame {
 		});
 	}
 
+	/**
+	 * Instantiates a new log in frame.
+	 *
+	 * @throws InstantiationException the instantiation exception
+	 * @throws IllegalAccessException the illegal access exception
+	 */
 	public LogInFrame() throws InstantiationException, IllegalAccessException {
 		lg = new Login();
 		initialize();
 	}
 
-	/*
+	/**
+	 * Initialize.
+	 *
+	 *
 	 * postavljanje izgleda sucelja te provjera postoji li klijent u bazi te
 	 * kreiranje novog
 	 */

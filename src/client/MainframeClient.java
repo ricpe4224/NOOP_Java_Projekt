@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package client;
 
 import java.awt.Color;
@@ -23,33 +26,73 @@ import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class MainframeClient.
+ */
 /*
  * Klasa za glavno sucelje aplikacije, prikazuje temperaturu pritiskom na gumb
  */
 public class MainframeClient {
+	
+	/** The lbl temperatura. */
 	private JLabel lblTemperatura;
+	
+	/** The lbl vlaga. */
 	private JLabel lblVlaga;
+	
+	/** The lbl vjetar. */
 	private JLabel lblVjetar;
+	
+	/** The lbl tlak. */
 	private JLabel lblTlak;
+	
+	/** The lbl vidljivost. */
 	private JLabel lblVidljivost;
+	
+	/** The graf btn. */
 	//////////
 	private JButton grafBtn;
+	
+	/** The btn trenutno. */
 	private JButton btnTrenutno;
+	
+	/** The frame. */
 	private JFrame frame;
+	
+	/** The text field unesi ime grada. */
 	private JTextField textFieldUnesiImeGrada;
+	
+	/** The btn zatrazi. */
 	private JButton btnZatrazi;
-	private JPanel panelPočetni;
+	
+	/** The panel pocetni. */
+	private JPanel panelPocetni;
+	
+	/** The panel 3 dana. */
 	// panel 3dana
 	private JPanel panel3dana;
 
+	/** The lbl vremenska prognoza. */
 	private JLabel lblVremenskaPrognoza;
+	
+	/** The lbl lat. */
 	private JLabel lblLat;
+	
+	/** The lbl lon. */
 	private JLabel lblLon;
+	
+	/** The lbl max temp. */
 	private JLabel lblMaxTemp;
+	
+	/** The lbl vrsta. */
 	private JLabel lblVrsta;
 	
 	
 	
+	/**
+	 * Instantiates a new mainframe client.
+	 */
 	public MainframeClient() {
 		initialize();
 		panelTrenutna();
@@ -57,6 +100,9 @@ public class MainframeClient {
 		addActList();
 	}
 
+	/**
+	 * Initialize.
+	 */
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 925, 566);
@@ -69,7 +115,7 @@ public class MainframeClient {
 		textFieldUnesiImeGrada = new JTextField();
 
 		btnZatrazi = new JButton("Zatrazi prognozu");
-		panelPočetni = new JPanel();
+		panelPocetni = new JPanel();
 		initPanel3DaysComps();
 		lblVidljivost = new JLabel();
 		grafBtn = new JButton("Prikazi Graf");
@@ -79,6 +125,9 @@ public class MainframeClient {
 
 	}
 
+	/**
+	 * Pozicija.
+	 */
 	public void pozicija() {
 		// top
 		lblVremenskaPrognoza.setFont(new Font("Century", Font.BOLD, 50));
@@ -93,10 +142,10 @@ public class MainframeClient {
 		btnZatrazi.setBounds(480, 116, 130, 55);
 		frame.getContentPane().add(btnZatrazi);
 		// trenutni panel
-		panelPočetni.setBounds(12, 209, 897, 317);
-		frame.getContentPane().add(panelPočetni);
-		panelPočetni.setVisible(false);
-		panelPočetni.setLayout(null);
+		panelPocetni.setBounds(12, 209, 897, 317);
+		frame.getContentPane().add(panelPocetni);
+		panelPocetni.setVisible(false);
+		panelPocetni.setLayout(null);
 		// panel 3 dana
 		panel3dana = new JPanel();
 		panel3dana.setBounds(12, 209, 897, 317);
@@ -110,39 +159,39 @@ public class MainframeClient {
 		lblTemperatura = new JLabel();
 		lblTemperatura.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblTemperatura.setBounds(126, 8, 264, 41);
-		panelPočetni.add(lblTemperatura);
+		panelPocetni.add(lblTemperatura);
 		lblVlaga = new JLabel("Vlaga:");
 		lblVlaga.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblVlaga.setBounds(126, 56, 264, 35);
-		panelPočetni.add(lblVlaga);
+		panelPocetni.add(lblVlaga);
 		lblVjetar = new JLabel("Vjetar:");
 		lblVjetar.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblVjetar.setBounds(126, 102, 264, 35);
-		panelPočetni.add(lblVjetar);
+		panelPocetni.add(lblVjetar);
 
 		lblTlak = new JLabel("Tlak:");
 		lblTlak.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblTlak.setBounds(126, 148, 264, 35);
-		panelPočetni.add(lblTlak);
+		panelPocetni.add(lblTlak);
 
 		lblLat = new JLabel();
 		lblLat.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblLat.setBounds(479, 11, 264, 35);
-		panelPočetni.add(lblLat);
+		panelPocetni.add(lblLat);
 
 		lblLon = new JLabel();
 		lblLon.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblLon.setBounds(479, 56, 264, 35);
-		panelPočetni.add(lblLon);
+		panelPocetni.add(lblLon);
 
 		lblVrsta = new JLabel();
 		lblVrsta.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblVrsta.setBounds(332, 235, 302, 41);
-		panelPočetni.add(lblVrsta);
+		panelPocetni.add(lblVrsta);
 
 		lblVidljivost.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblVidljivost.setBounds(479, 102, 366, 35);
-		panelPočetni.add(lblVidljivost);
+		panelPocetni.add(lblVidljivost);
 
 		btnTrenutno.setBounds(12, 163, 90, 35);
 		frame.getContentPane().add(btnTrenutno);
@@ -156,6 +205,9 @@ public class MainframeClient {
 	 * prikaz za 3 dana neradi
 	 */
 
+	/**
+	 * Adds the act list.
+	 */
 	public void addActList() {
 
 		btnZatrazi.addActionListener(new ActionListener() {
@@ -176,7 +228,7 @@ public class MainframeClient {
 					double totalC = prognoza.getPrognoza().getMain().getTemp() - 273.1;
 
 					DecimalFormat df = new DecimalFormat("####0.00");
-					panelPočetni.setVisible(true);
+					panelPocetni.setVisible(true);
 
 					// System.out.println("Value of temp in C: " + df.format(totalC));
 					lblTemperatura.setText("Temperatura je: " + df.format(totalC)+"C");
@@ -206,7 +258,7 @@ public class MainframeClient {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				panelPočetni.setVisible(true);
+				panelPocetni.setVisible(true);
 
 			}
 		});
@@ -214,7 +266,7 @@ public class MainframeClient {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				panelPočetni.setVisible(true);
+				panelPocetni.setVisible(true);
 				Prognoza prognoza = Prognoza.getInstance();
 				double totalC = prognoza.getPrognoza().getMain().getTemp() - 273.1;
 				int totalCint = (int) Math.round(totalC);
@@ -248,6 +300,11 @@ public class MainframeClient {
 
 	}
 	
+	/**
+	 * Centre window.
+	 *
+	 * @param frame the frame
+	 */
 	public static void centreWindow(Window frame) {
 	    Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
 	    int x = (int) ((dimension.getWidth() - frame.getWidth()) / 2);
@@ -255,53 +312,62 @@ public class MainframeClient {
 	    frame.setLocation(x, y);
 	}
 
+	/**
+	 * Panel trenutna.
+	 */
 	public void panelTrenutna() {
 
-		panelPočetni.setBounds(12, 209, 897, 317);
+		panelPocetni.setBounds(12, 209, 897, 317);
 
-		frame.getContentPane().add(panelPočetni);
-		panelPočetni.setVisible(false);
-		panelPočetni.setLayout(null);
+		frame.getContentPane().add(panelPocetni);
+		panelPocetni.setVisible(false);
+		panelPocetni.setLayout(null);
 
 		lblTemperatura = new JLabel("");
 		lblTemperatura.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblTemperatura.setBounds(126, 8, 264, 41);
-		panelPočetni.add(lblTemperatura);
+		panelPocetni.add(lblTemperatura);
 		lblVlaga = new JLabel("");
 		lblVlaga.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblVlaga.setBounds(126, 56, 264, 35);
-		panelPočetni.add(lblVlaga);
+		panelPocetni.add(lblVlaga);
 		lblVjetar = new JLabel("");
 		lblVjetar.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblVjetar.setBounds(126, 102, 264, 35);
-		panelPočetni.add(lblVjetar);
+		panelPocetni.add(lblVjetar);
 
 		lblTlak = new JLabel("");
 		lblTlak.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblTlak.setBounds(126, 148, 264, 35);
-		panelPočetni.add(lblTlak);
+		panelPocetni.add(lblTlak);
 
 		lblLat = new JLabel("");
 		lblLat.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblLat.setBounds(479, 11, 366, 35);
-		panelPočetni.add(lblLat);
+		panelPocetni.add(lblLat);
 
 		lblLon = new JLabel("");
 		lblLon.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblLon.setBounds(479, 56, 366, 35);
-		panelPočetni.add(lblLon);
+		panelPocetni.add(lblLon);
 
 		lblVrsta = new JLabel("TRENUTNA TEMPERATURA");
 		lblVrsta.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblVrsta.setBounds(332, 235, 302, 41);
-		panelPočetni.add(lblVrsta);
+		panelPocetni.add(lblVrsta);
 
 	}
 
+	/**
+	 * Panel 3 days.
+	 */
 	public void panel3Days() {
 
 	}
 
+	/**
+	 * Inits the panel 3 days comps.
+	 */
 	public void initPanel3DaysComps() {
 
 	}
